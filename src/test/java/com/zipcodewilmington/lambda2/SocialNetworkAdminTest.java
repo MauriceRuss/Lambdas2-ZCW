@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -24,22 +25,17 @@ public class SocialNetworkAdminTest {
     List<Person> crew;
     @Before
     public void setUp(){
-        SocialNetworkAdmin theHub = new SocialNetworkAdmin();
-        theHub.addToSocNet(mo);
-        theHub.addToSocNet(jack);
-        theHub.addToSocNet(damon);
-        theHub.addToSocNet(jamie);
-        theHub.addToSocNet(colleen);
+
+        crew.add(mo);
+        crew.add(jack);
+        crew.add(damon);
+        crew.add(jamie);
+        crew.add(colleen);
 
     }
 
 
-    @Test
-    public void addToSocNet() {
-        int expected = 44;
-        int actual = mo.getAge();
-        Assert.assertEquals(expected, actual);
-    }
+
 
 
 }

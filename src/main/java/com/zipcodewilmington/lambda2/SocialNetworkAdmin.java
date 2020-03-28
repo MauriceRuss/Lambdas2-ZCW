@@ -9,15 +9,13 @@ public class SocialNetworkAdmin implements CheckPerson {
     public SocialNetworkAdmin() {
         this.roster = new ArrayList<>();
     }
-
+    //check for adult content
     @Override
     public boolean test(Person p) {
-        return false;
+        return p.getAge()>21;
     }
 
-    public void addToSocNet(Person p){
-       roster.add(p);
-    }
+
 
 
 }
