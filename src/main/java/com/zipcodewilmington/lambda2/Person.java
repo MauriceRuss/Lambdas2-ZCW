@@ -50,10 +50,27 @@ public class Person {
         System.out.println(name+ " " + birthday + " " + gender + " " + email);
     }
 
-    public static void printPersonList(List<Person> personList){
-        for(Person p : personList){
-            p.printPersonList(personList);
+    public static void printPersonList(List<Person> personList,CheckPerson tester) {
+        for (Person p : personList) {
+            if (tester.test(p)) {
+                p.printPerson();
+            }
         }
+    }
 
+    public static void printPersonsOlderThan(List<Person> roster, int age) {
+        for (Person p : roster) {
+            if (p.getAge() >= age) {
+                p.printPerson();
+            }
+        }
+    }
+
+    public static void printPersonsWithinAgeRange(List<Person> roster, int i, int j) {
+        for (Person p : roster) {
+            if (i <= p.getAge() && p.getAge() < j) {
+                p.printPerson();
+            }
+        }
     }
 }
