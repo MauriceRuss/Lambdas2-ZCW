@@ -1,6 +1,7 @@
 package com.zipcodewilmington.lambda2;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 
 public class Person {
@@ -38,6 +39,12 @@ public class Person {
     public String getEmail() {
         return email;
     }
+
+    public int getAge(){
+        LocalDate now = LocalDate.now();
+        return Period.between(birthday, now).getYears();
+    }
+
 
     public  void  printPerson(){
         System.out.println(name+ " " + birthday + " " + gender + " " + email);
