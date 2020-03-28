@@ -39,11 +39,11 @@ public class Person {
         return email;
     }
 
-    public void printPerson(){
+    public  void  printPerson(){
         System.out.println(name+ " " + birthday + " " + gender + " " + email);
     }
 
-    public void printPersonList(List<Person> personList){
+    public static void printPersonList(List<Person> personList){
         for(Person p : personList){
             p.printPersonList(personList);
         }
